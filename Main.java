@@ -1,39 +1,178 @@
-/********************************************
-*	AUTHORS:	<your names>
-* COLLABORATORS: <name of peer, tutor, instructor, anyone else who helped>
-*	LAST MODIFIED:	<date of last change>
-********************************************/
-
-/********************************************
-*	<TITLE OF PROGRAM>
-*********************************************
-*	PROGRAM DESCRIPTION:
-*	<1-2 sentences describing overall program>
-*********************************************
-*	ALGORITHM:
-*	<Pseudocode here>
-*********************************************
-*	STATIC METHODS:
-* <UML style list of static methods>
-*********************************************/
-
-
-public class Main 
+public class Main
 {
   /***** CONSTANT SECTION *****/
-
+  static final String CURRENCY = "USD";
+  static final String PROGRAM_NAME = "Wealth disparity Analyzer";
   public static void main(String[] args)
   {
     /***** DECLARATION SECTION *****/
+    String countryName;
+    double averageWealth;
+    double medianWealth;
+    double topOnePercentShare;
+    double povertyRate;
+
+
+    int population;
+    int unemployedPopulation;
+
+
+    double ratio;
+    double unemploymentRate;
+
+
+    String cCountryName;
+    double cAverageWealth;
+    double cMedianWealth;
+    double cTopOnePercentShare;
+    double cPovertyRate;
+
+    int cPopulation;
+    int cUnemployedPopulation;
+
+
+    String jCountryName;
+    double jAverageWealth;
+    double jMedianWealth;
+    double jTopOnePercentShare;
+    double jPovertyRate;
+
+    int jPopulation;
+    int jUnemployedPopulation;
 
     /***** INITIALIZATION SECTION *****/
+    countryName = "Germany";
+    averageWealth = 256000.0;
+    medianWealth = 106000.0;
+    topOnePercentShare = 28.0;
+    povertyRate = 16.6;
 
-    /***** INTRO SECTION *****/
 
-    /***** PROCESSING SECTION *****/
 
+
+    population = 84000000;
+    unemployedPopulation = 4800000;
+
+    cCountryName = "Canada";
+    cAverageWealth = 520000;
+    cMedianWealth = 338000;
+    cTopOnePercentShare = 28.0;
+    cPovertyRate = 10.6;
+
+
+    cPopulation = 41400000;
+    cUnemployedPopulation = 1482400;
+
+    jCountryName = "Japan";
+    jAverageWealth = 211846;
+    jMedianWealth = 83843;
+    jTopOnePercentShare = 300000;
+    jPovertyRate = 15.4;
+
+    jPopulation = 122400000;
+    jUnemployedPopulation = 2.50;
+
+
+
+
+
+
+
+    ratio = calculateTopOnePercentToPovertyRatio(topOnePercentShare, povertyRate);
+    unemploymentRate = calculateUnemploymentRate(population, unemployedPopulation);
+
+    ratio = calculateTopOnePercentToPovertyRatio(cTopOnePercentShare, cPovertyRate);
+    unemploymentRate = calculateUnemploymentRate(cPopulation, cUnemployedPopulation);
+
+    ratio = calculateTopOnePercentToPovertyRatio(jTopOnePercentShare, jPovertyRate);
+    unemploymentRate = calculateUnemploymentRate(jPopulation, jUnemployedPopulation);
     /***** OUTPUT SECTION *****/
-    
-  }
-  /***** STATIC METHODS *****/
-}
+    System.out.println("Country: " + countryName);
+    System.out.println("---------------------------------------");
+
+
+
+
+    System.out.println("Average Wealth: " + cAverageWealth + " " + CURRENCY);
+    System.out.println("Median Wealth: " + cMedianWealth + " " + CURRENCY);
+    System.out.println("Population: " + cPopulation);
+
+
+
+
+    System.out.println("Top 1% Wealth Share: " + cTopOnePercentShare + "%");
+    System.out.println("Poverty Rate: " + cPovertyRate + "%");
+    System.out.println("Unemployed Population: " + cUnemployedPopulation);
+
+
+
+
+    System.out.println("\n--- Calculated Results ---");
+
+
+
+
+    System.out.println("Unemployment Rate: " + unemploymentRate + "%");
+    System.out.println("Top 1% to Poverty Ratio: " + ratio);
+
+
+    System.out.println("Country: " + cCountryName);
+    System.out.println("---------------------------------------");
+
+
+
+
+    System.out.println("Average Wealth: " + cAverageWealth + " " + CURRENCY);
+    System.out.println("Median Wealth: " + cMedianWealth + " " + CURRENCY);
+    System.out.println("Population: " + cPopulation);
+
+
+
+
+    System.out.println("Top 1% Wealth Share: " + cTopOnePercentShare + "%");
+    System.out.println("Poverty Rate: " + cPovertyRate + "%");
+    System.out.println("Unemployed Population: " + cUnemployedPopulation);
+
+
+
+
+    System.out.println("\n--- Calculated Results ---");
+
+
+
+
+    System.out.println("Unemployment Rate: " + unemploymentRate + "%");
+    System.out.println("Top 1% to Poverty Ratio: " + ratio);
+
+
+    System.out.println("Country: " + countryName);
+    System.out.println("---------------------------------------");
+
+
+
+
+    System.out.println("Average Wealth: " + jAverageWealth + " " + CURRENCY);
+    System.out.println("Median Wealth: " + jMedianWealth + " " + CURRENCY);
+    System.out.println("Population: " + jPopulation);
+
+
+
+
+    System.out.println("Top 1% Wealth Share: " + jTopOnePercentShare + "%");
+    System.out.println("Poverty Rate: " + jPovertyRate + "%");
+    System.out.println("Unemployed Population: " + jUnemployedPopulation);
+
+
+
+
+    System.out.println("\n--- Calculated Results ---");
+
+
+
+
+    System.out.println("Unemployment Rate: " + unemploymentRate + "%");
+    System.out.println("Top 1% to Poverty Ratio: " + ratio);
+
+
+
+  } }
