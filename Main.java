@@ -1,10 +1,35 @@
-public class Main
-{
-  /***** CONSTANT SECTION *****/
-  static final String CURRENCY = "USD";
-  static final String PROGRAM_NAME = "Wealth disparity Analyzer";
-  public static void main(String[] args)
+/********************************************
+   *   AUTHORS:   <Jackson Loeffler, Keyan Zokaie, Qaseem Yousag, Michael Forbes>
+   * COLLABORATORS: <name of peer, tutor, instructor, anyone else who helped>
+   *   LAST MODIFIED: <date of last change>
+   ********************************************/
+
+
+  /********************************************
+   *   <Avg>
+   *********************************************
+   *   PROGRAM DESCRIPTION:
+   *   <Wealthy disparity calculator>
+   *********************************************
+   *   ALGORITHM:
+   *   <Pseudocode here>
+   *********************************************
+   *   STATIC METHODS:
+   * <UML style list of static methods>
+   *********************************************/
+
+
+
+
+  public class Main
   {
+    /***** CONSTANT SECTION *****/
+    static final String CURRENCY = "USD";
+    static final String PROGRAM_NAME = "Wealth disparity Analyzer"
+    public static void main(String[] args)
+    {
+
+      {
     /***** DECLARATION SECTION *****/
     String countryName;
     double averageWealth;
@@ -38,7 +63,10 @@ public class Main
     double jPovertyRate;
 
     int jPopulation;
-    int jUnemployedPopulation;
+    double jUnemployedPopulation;
+
+
+
 
     /***** INITIALIZATION SECTION *****/
     countryName = "Germany";
@@ -53,6 +81,7 @@ public class Main
     population = 84000000;
     unemployedPopulation = 4800000;
 
+
     cCountryName = "Canada";
     cAverageWealth = 520000;
     cMedianWealth = 338000;
@@ -63,14 +92,15 @@ public class Main
     cPopulation = 41400000;
     cUnemployedPopulation = 1482400;
 
+
     jCountryName = "Japan";
     jAverageWealth = 211846;
     jMedianWealth = 83843;
-    jTopOnePercentShare = 300000;
+    jTopOnePercentShare = 30.0;
     jPovertyRate = 15.4;
 
     jPopulation = 122400000;
-    jUnemployedPopulation = 2.50;
+    jUnemployedPopulation = 25.0;
 
 
 
@@ -78,14 +108,14 @@ public class Main
 
 
 
-    ratio = calculateTopOnePercentToPovertyRatio(topOnePercentShare, povertyRate);
-    unemploymentRate = calculateUnemploymentRate(population, unemployedPopulation);
+    double gRatio = calculateTopOnePercentToPovertyRatio(topOnePercentShare, povertyRate);
+    double gUnemployment = calculateUnemploymentRate(population, unemployedPopulation);
 
-    ratio = calculateTopOnePercentToPovertyRatio(cTopOnePercentShare, cPovertyRate);
-    unemploymentRate = calculateUnemploymentRate(cPopulation, cUnemployedPopulation);
+    double cRatio = calculateTopOnePercentToPovertyRatio(cTopOnePercentShare, cPovertyRate);
+    double cUnemployment = calculateUnemploymentRate(cPopulation, cUnemployedPopulation);
 
-    ratio = calculateTopOnePercentToPovertyRatio(jTopOnePercentShare, jPovertyRate);
-    unemploymentRate = calculateUnemploymentRate(jPopulation, jUnemployedPopulation);
+    double jRatio = calculateTopOnePercentToPovertyRatio(jTopOnePercentShare, jPovertyRate);
+    double jUnemployment = calculateUnemploymentRate(jPopulation, jUnemployedPopulation);
     /***** OUTPUT SECTION *****/
     System.out.println("Country: " + countryName);
     System.out.println("---------------------------------------");
