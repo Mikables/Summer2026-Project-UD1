@@ -18,10 +18,14 @@
    * <UML style list of static methods>
    *********************************************/
 
+/**This code was made as a wealth disparity calculator.
+   made to show the difference in wealth status and poverty
+   status in different countries around the world using the US dollar as a baseline.
+   I then calculate the different poverty rates and wealth rates of each country.
 
+ */
 
-
-  public class Main
+public class Main
   {
     /***** CONSTANT SECTION *****/
     static final String CURRENCY = "USD";
@@ -36,6 +40,7 @@
     double medianWealth;
     double topOnePercentShare;
     double povertyRate;
+    double calculateTopOnePercentPovertyRatio;
 
 
     int population;
@@ -206,3 +211,9 @@
 
 
   } }
+
+    private static double calculateUnemploymentRate(int population, int unemployedPopulation) {
+    }
+
+    private static double calculateTopOnePercentToPovertyRatio(double topOnePercentShare, double povertyRate) {
+    }
